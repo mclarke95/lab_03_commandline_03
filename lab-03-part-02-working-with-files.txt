@@ -12,13 +12,13 @@ Follow the instructions line-by-line.
 [NO OUTPUT]
 ----------
 ==========
-2. Find out if mtec1002-lab-02 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
+2. Find out if mtec1003-lab-03 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
 
-(See steps 1-8 in http://foureyes.github.io/mtec1002-spring2014/labs/03/lab-03-part-02-working-with-files.txt)
+(See steps 1-8 in http://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/03/lab-03-part-02-working-with-files.txt)
 [NO OUTPUT]
 ----------
 ==========
-3. Change your directory mtec1002-lab-03
+3. Change your directory mtec1003-lab-03
 [NO OUTPUT]
 ----------
 ==========
@@ -36,7 +36,7 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
-
+foo.txt
 
 
 ==========
@@ -44,7 +44,7 @@ Copy and paste the output below.
 
 $ touch bar.txt
 ----------
-
+bar.txt	foo.txt
 
 
 ==========
@@ -53,7 +53,8 @@ $ touch bar.txt
 Copy and paste the output below.
 ----------
 
-
+-rw-r--r--  1 student  staff  0 Feb 18 20:10 bar.txt
+-rw-r--r--  1 student  staff  0 Feb 18 20:05 foo.txt
 
 ==========
 9. Create a copy of bar.txt called baz.txt and then list the files again.
@@ -61,6 +62,11 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
+cp bar.txt baz.txt
+
+ent-v321-008:my_files student$ ls
+
+bar.txt	baz.txt	foo.txt
 
 
 
@@ -75,11 +81,16 @@ Write the command that you used to remove the file.  Copy and paste the output o
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
+mv foo.txt qux.txt
+
+ent-v321-008:my_files student$ ls
+
+bar.txt	baz.txt	qux.txt
 
 
 
 ==========
-12. Go up one directory so that you're in ~/mtec1002-lab-03.
+12. Go up one directory so that you're in ~/mtec1003-lab-03.
 [NO OUTPUT]
 ----------
 
@@ -90,6 +101,9 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	mtec1003-lab-03
+V217-M13:~ Guest$ 
 
 
 
@@ -99,20 +113,25 @@ Write out the command that you used and what happened.
 Write out the command that you used and what happened.
 ----------
 
+rm my_files
+
+rm: my_files: is a directory
+
 
 
 ==========
-15. MAKE SURE YOU'RE IN THE mtec1002-lab-03 directory!  
+15. MAKE SURE YOU'RE IN THE mtec1003-lab-03 directory!  
 
 Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
+V217-M13:~ Guest$ rm -rf my_files
 
-
+V217-M13:~ Guest$ 
 
 ==========
-16. There's a txt file version of a book located in the mtec1002-lab-03 folder.  It is in the following directory if you're in the lab folder:
+16. There's a txt file version of a book located in the mtec1003-lab-03 folder.  It is in the following directory if you're in the lab folder:
 
 books/other/pg1232.txt
 
@@ -120,6 +139,8 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
+V217-M13:~ Guest$ cat pg1232.txt
+V217-M13:~ Guest$ 
 
 
 
@@ -132,6 +153,9 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
+V217-M13:~ Guest$ head pg1232.txt
+
+V217-M13:~ Guest$ 
 
 
 
@@ -142,9 +166,10 @@ books/other/pg1232.txt
 
 Use tail on the file to show the contents of the end of the file.  
 
-Write the command that you used below.  Write the last line of the output below (it should be the title).
+Write the command that you used below.  Write the last line of the output below.
 ----------
-
+V217-M13:~ Guest$ tail pg1232.txt
+V217-M13:~ Guest$ 
 
 
 ==========
@@ -156,7 +181,7 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
-
+less or more shows what is in pg1232.txt and space bar or q return you to your code screen 
 
 
 ==========
@@ -164,15 +189,28 @@ Write the command that you used below.  Describe what spacebar and q does after 
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
-
+less: shows long version of a file
+more: shows short version of a file 
+tail: shows end of a file 
+head: shows beginning of a file 
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
+wc pg1232.txt
 
 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
+----------
+wc-l pg1232.txt
+
+==========
+OPTIONAL
+
+23.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
 ----------

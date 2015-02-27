@@ -16,26 +16,33 @@ This lab will review downloading and uncompressing files, and it will get us set
 Write the command that you used to do this below:
 ----------
 
-
+cd ~
 
 ==========
 2. Prove that you're in your home directory.
 
 Write the command that you used to do this - as well as its output - below :
 ----------
+pwd 
+/Users/student
 
 
 
 ==========
-3. Are there any directories or files in your directory that have the word mtec1002 in it?
+3. Are there any directories or files in your directory that have the word mtec1003 in it?
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
+ls
+Applications	Downloads	Music		Public		VirtualBox VMs
+Desktop		Library		My Song.band	Sites		mtec1003
+Documents	Movies		Pictures	Things		vms
+ent-v321-008:~ student$ 
 
 
 
 ==========
-4. If there are directories or files in your home directory that have the word mtec1002 in them, list them below (otherwise skip this step):
+4. If there are directories or files in your home directory that have the word mtec1003 in them, list them below (otherwise skip this step):
 ----------
 
 
@@ -47,25 +54,31 @@ $ rm -rf [name of directory/folder]
 
 for example:
 
-$ rm -rf mtec1002-labs-02
+$ rm -rf mtec1003-labs-02
 
 (skip if these directories don't exist)
 ----------
+Applications	Downloads	Music		Public		VirtualBox VMs
+Desktop		Library		My Song.band	Sites		vms
+Documents	Movies		Pictures	Things
 
 
 
 ==========
 6.  A compressed archive (.tar.gz) of the lab files can be found at this url: 
 
-http://foureyes.github.io/mtec1002-spring2014/labs/03/mtec1002-lab-03.tar.gz
+http://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/03/mtec1003-lab-03.tar.gz
 
-Download this file to your home directory into a file called mtec1002-lab-03.tar.gz.   Use a command that we learned to do this.
+Download this file to your home directory into a file called mtec1003-lab-03.tar.gz.   Use a command that we learned to do this.
 
-This command should have a *flag* to specify the output file.  MAKE SURE TO NAME YOUR OUTPUT FILE: mtec1002-lab-03.tar.gz
+This command should have a *flag* to specify the output file.  MAKE SURE TO NAME YOUR OUTPUT FILE: mtec1003-lab-03.tar.gz
 
 Write the command(s) that you used to download this file - as well as its output - below:
-----------
-
+-------
+ curl -o mtec1003-lab-03.tar.gz http://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/03/mtec1003-lab-03.tar.gz
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  898k  100  898k    0     0  1381k      0 --:--:-- --:--:-- --:--:-- 1382k
 
 
 ==========
@@ -73,11 +86,13 @@ Write the command(s) that you used to download this file - as well as its output
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
-
+ tar -xvf mtec1003-lab-03.tar.gz 
+x mtec1003-lab-03/
+x mtec1003-lab-03/._.DS_Store
+x mtec1003-lab-03/.DS_Store
 
 ==========
-8.  You should now have a directory called mtec1002-lab-03 in your home directory.  Verify that this directory exists.
+8.  You should now have a directory called mtec1003-lab-03 in your home directory.  Verify that this directory exists.
 
 If the directory does not exist:
 
@@ -88,22 +103,31 @@ Otherwise...
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
+ls
+Applications		Music			VirtualBox VMs
+Desktop			My Song.band		mtec1003-lab-03
+Documents		Pictures		mtec1003-lab-03.tar.gz
+Downloads		Public			vms
+Library			Sites
+Movies			Things
 
 
 
 ==========
-9.  What directories are in the mtec1002-lab-03 folder?
+9.  What directories are in the mtec1003-lab-03 folder?
 
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
 
-
+ls mtec1003-lab-03
+books	logs	web
 
 ==========
-10.  Now... go back home.  Then change to the science-fiction directory using a relative path.  The directory is located in books... which is located in the mtec1002-lab-03 directory.  Verify you're in the right directory using pwd.
+10.  Now... go back home.  Then change to the science-fiction directory using a relative path.  The directory is located in books... which is located in the mtec1003-lab-03 directory.  Verify you're in the right directory using pwd.
 
 Write the command(s) (including going home) that you used to do this below:
-----------
+cd ~/mtec1003-lab-03/books/science-fiction 
+
 
 
 
@@ -112,7 +136,7 @@ Write the command(s) (including going home) that you used to do this below:
 
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
-
+ls science fiction 
 
 
 ==========
@@ -120,17 +144,17 @@ Write the command(s) that you used to do this - as well as its output - below:
 
 Write the command(s) that you used to do this below:
 ----------
-
+/users/Students/mtec1003-lab 03/books/science-fiction
 ==========
 OPTIONAL
-13. Immediately change back to the mtec1002-lab-03 folder with a single command using a *relative* path.
+13. Immediately change back to the mtec1003-lab-03 folder with a single command using a *relative* path.
 
 Write the command(s) that you used to do this below:
 ----------
 
 ==========
 OPTIONAL
-14. Find out what the most recently modified directory is in mtec1002 (there are only 3 to choose from)?  How would you find this out?  Hint: perhaps using something to show the modified date... and sort it by time.
+14. Find out what the most recently modified directory is in mtec1003 (there are only 3 to choose from)?  How would you find this out?  Hint: perhaps using something to show the modified date... and sort it by time.
 
 Write the command(s) that you used to do this below:
 ----------
